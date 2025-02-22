@@ -634,3 +634,117 @@ section {
     background-color: #111;
     margin-top: 20px;
 }
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #f8f8f8;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        background: #f0f0f0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .content, .projects {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .slideshow-container {
+        margin-top: 80px;
+    }
+
+    .slide img {
+        height: 200px;
+    }
+
+    .about-container,
+    .software-service-container,
+    .engineering-service-container {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .about-image,
+    .software-service-image,
+    .engineering-service-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container > div {
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
